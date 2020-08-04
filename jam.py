@@ -97,7 +97,7 @@ def login():
 		print " ONLY LOGIN Token FB ACCOUNT ."
 		print 42*"\033[1;96m="
 		print('\033[1;96m\x1b[1;93mLOGIN WITH FACEBOOK \x1b[1;96m' )
-		id = raw_input("[+] Give Token : ")
+		hosp = raw_input("[+] Give Token : ")
 		tik()
 		hopa = open('login.txt','w')
 		hopa.write(hosp)
