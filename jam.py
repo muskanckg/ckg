@@ -102,7 +102,6 @@ def login():
 		hopa = open('login.txt','w')
 		hopa.write(hosp)
 		hopa.close()
-		print "\[✓] Logged in Successfully."
 		time.sleep(1)
 		os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 def menu():
