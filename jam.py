@@ -1,13 +1,21 @@
-import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
-from multiprocessing.pool import ThreadPool
-from requests.exceptions import ConnectionError
-from mechanize import Browser
+#!/usr/bin/python
+# coding=utf-8
+# Originally Written By:Jam Shahrukh
+# Source : Python2"
+# Donot Recode It. 
+
+#Import module
+try:
+    import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,getpass,mechanize,requests
+    from multiprocessing.pool import ThreadPool
+    from requests.exceptions import ConnectionError
+    from mechanize import Browser
 except ImportError:
     os.system('pip2 install requests')
     os.system('pip2 install mechanize')
     os.system('python2 muskan.py')
 
- 
+#Browser Setting
 reload(sys)
 sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
