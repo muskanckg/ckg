@@ -122,23 +122,24 @@ def menu():
 	print 42*"\033[1;96m="
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start CLONING WITH CKG"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
-	print ('                  ')
-	men()
-
-def men():
-	rana = raw_input("Choose Option >>  ")
-	elif rana =="1":
-		crack()
-	elif rana =="0":
+	pilih()
+def pilih():
+	unikers = raw_input("\n\033[1;97m >>> \033[1;97m")
+	if unikers =="":
+		print "\033[1;96m \x1b[1;91mFill in correctly"
+		pilih()
+	elif unikers =="1":
+		super()
+	elif unikers =="0":
+		jalan('Token Removed')
 		os.system('rm -rf login.txt')
-		hamza('[✓] Logged Out Successfully')
-		os.system('python2 muskan.py')
+		keluar()
 	else:
-		print "[!] Wrong Input"
-		men()
+		print "\033[1;96m \x1b[1;91mFill in correctly"
+		pilih()
 	
 ##### INFO #####
-def crack():
+def super():
 	global toket
 	os.system('clear')
 	try:
