@@ -152,7 +152,7 @@ def login():
 	except (KeyError,IOError):
 		os.system("clear")
 		print (banner)
-		hamza('[+] Login Your Facebook Account')
+		hamza('[+] JAM KING OF FACEBOOK')
 		hamza('[!] Donot Use Your Personal Account')
 		hamza('[!] Use a New Facebook Account To Login')
 		print'-------------------------------------'
