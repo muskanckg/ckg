@@ -119,12 +119,9 @@ def menu():
 
 def men():
 	rana = raw_input("Choose Option >>  ")
-	if rana =="":
-		print " Wrong Input"
-		men()
 	elif rana =="1":
 		crack()
-	elif rana =="2":
+	elif rana =="0":
 		os.system('rm -rf login.txt')
 		hamza('[✓] Logged Out Successfully')
 		os.system('python2 muskan.py')
