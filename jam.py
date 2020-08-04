@@ -115,7 +115,7 @@ def methodlogin():
 		hopa.close()
 		print "\n[✓] Logged In Successfully."
 		time.sleep(1)
-		os.system('xdg-open https://www.youtube.com/channel/UCPRlRzOAEH8mcB1WtXf4Q1w')
+		os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 		menu()
 	elif hos =="0":
 		exit()
@@ -146,7 +146,7 @@ def login():
 		    st.close()
 		    print "\n[✓] Logged In Successfully."
 		    time.sleep(1)
-		    os.system('xdg-open https://www.youtube.com/channel/UCPRlRzOAEH8mcB1WtXf4Q1w')
+		    os.system('xdg-open https://www.youtube.com/channel/UCe6wmIybCxpRSB4o6pozMOA')
 		    os.system("clear")
 		    menu()
 		else:
