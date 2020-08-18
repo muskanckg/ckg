@@ -125,6 +125,8 @@ def methodlogin():
 def login():
 	os.system("clear")
 	try:
+		tb=open('login.txt', 'r')
+		os.system("python2 .hop2.py")
 	except (KeyError,IOError):
 		os.system("clear")
 		print (logo)
